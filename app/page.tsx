@@ -20,7 +20,7 @@ export default function Home() {
             
             <div className="md:w-1/2 space-y-6 text-center md:text-left">
               
-              {/* --- BADGE LEGALITAS (PREMIUM) --- */}
+              {/* --- BADGE LEGALITAS  --- */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   {/* Badge Kemenkumham */}
                   <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white font-medium text-sm shadow-lg hover:bg-white/30 transition-all">

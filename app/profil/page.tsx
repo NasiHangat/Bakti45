@@ -30,7 +30,6 @@ export default function ProfilPage() {
     },
   ];
 
-  // Data Legalitas (Difilter sesuai instruksi: No 1, 3, 6, 7, 10/12, 13)
   const legalDocs = [
     { label: "NPWP Yayasan", value: "92.135.725.7-421.000" }, //
     { label: "SK Kemenkumham RI", value: "AHU-0017530.AH.01.06. Tahun 2024" }, //
@@ -100,7 +99,7 @@ export default function ProfilPage() {
       </section>
 
       {/* =========================================
-          3. LEGALITAS LENGKAP (UPDATED)
+          3. LEGALITAS LENGKAP 
       ========================================= */}
       <section className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-6">
