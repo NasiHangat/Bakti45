@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, Users, BookOpen, ArrowRight, CheckCircle, Copy, ShieldCheck } from "lucide-react";
+// 1. Tambahkan import 'Award'
+import { Heart, Users, BookOpen, ArrowRight, CheckCircle, Copy, ShieldCheck, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -19,9 +20,17 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
             
             <div className="md:w-1/2 space-y-6 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
-                <ShieldCheck className="w-4 h-4" />
-                <span>Terdaftar Resmi Kemenkumham</span>
+              
+              {/* --- BADGE LEGALITAS (UPDATED) --- */}
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
+                    <ShieldCheck className="w-4 h-4" />
+                    <span>Terdaftar Resmi Kemenkumham</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
+                    <Award className="w-4 h-4" />
+                    <span>Terakreditasi B Kemensos RI</span>
+                  </div>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -35,15 +44,12 @@ export default function Home() {
                 Wujudkan kepedulian nyata untuk membantu mereka yang membutuhkan akses pendidikan dan kehidupan layak.
               </p>
               
-              {/* TOMBOL HERO (UPDATED ANIMATION) */}
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                 {/* Tombol Utama: Donasi */}
                  <Link href="#donasi" className="bg-brand-yellow text-brand-blue font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-yellow-500/50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
                     <Heart className="w-5 h-5 fill-current" />
                     Mulai Berdonasi
                  </Link>
                  
-                 {/* Tombol Sekunder: Jadi Relawan (ANIMASI DITAMBAHKAN) */}
                  <Link href="https://wa.me/62881023512953?text=Halo%20Admin,%20saya%20berminat%20jadi%20relawan" className="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-white/50 hover:-translate-y-1 hover:bg-white hover:text-brand-blue transition-all flex items-center justify-center gap-2">
                     <Users className="w-5 h-5" />
                     Jadi Relawan

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // <--- 1. Import Image Component
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Heart } from 'lucide-react';
 
@@ -60,9 +60,13 @@ export default function Navbar() {
                 />
             </div>
             
-            <div className={`flex flex-col ${scrolled ? 'text-gray-800' : 'text-white'}`}>
+            <div className={`flex flex-col justify-center ${scrolled ? 'text-gray-800' : 'text-white'}`}>
                 <span className="font-bold text-lg leading-none tracking-tight">Yayasan</span>
-                <span className="text-sm font-medium opacity-90">Bakti 45 Sejahtera</span>
+                <span className="text-sm font-medium opacity-95 leading-tight">Bakti 45 Sejahtera</span>
+                {/* --- TEKS TAMBAHAN --- */}
+                <span className="text-[10px] opacity-80 uppercase tracking-wide mt-0.5">
+                  Rumah Cinta Yatim Piatu Duafa
+                </span>
             </div>
         </Link>
 

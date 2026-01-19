@@ -20,7 +20,7 @@ export default function Footer() {
           {/* KOLOM 1: IDENTITAS (Lebar 5 kolom) */}
           <div className="md:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
-               <div className="relative w-16 h-16 bg-white rounded-2xl p-2 shadow-lg shadow-blue-900/50 flex items-center justify-center">
+               <div className="relative w-16 h-16 bg-white rounded-2xl p-2 shadow-lg shadow-blue-900/50 flex items-center justify-center shrink-0">
                   <Image 
                     src="/logo45.png" 
                     alt="Logo Yayasan" 
@@ -31,7 +31,13 @@ export default function Footer() {
                </div>
                <div>
                   <h3 className="font-bold text-2xl leading-none tracking-tight">Yayasan <br/>Bakti 45 Sejahtera</h3>
-                  <span className="inline-block mt-2 px-3 py-1 bg-white/10 rounded-full text-[10px] font-medium tracking-wide border border-white/20 text-brand-yellow">
+                  
+                  {/* --- TEKS TAMBAHAN --- */}
+                  <span className="block text-xs font-medium text-blue-200 mt-1 uppercase tracking-wide opacity-80">
+                    Rumah Cinta Yatim Piatu Duafa
+                  </span>
+
+                  <span className="inline-block mt-3 px-3 py-1 bg-white/10 rounded-full text-[10px] font-medium tracking-wide border border-white/20 text-brand-yellow">
                     AHU-0017530.AH.01.06.
                   </span>
                </div>
