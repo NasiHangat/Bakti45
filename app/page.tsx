@@ -174,7 +174,7 @@ export default function Home() {
                  <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Program Anak Asuh</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                        Mengangkat anak yatim piatu dan dhuafa. Anak asuh dibina untuk memiliki komitmen menjadi relawan yayasan selama menjadi anak asuh, serta didukung kebutuhan tempat tinggal dan pendidikannya.
+                        Mengangkat anak asuh Yatim piatu duafa menjadi anak asuh utk mendapatkan tempat tinggal dan pendidian yg layak Minimal smpai jenjang SMA/K
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
                         <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
@@ -220,9 +220,9 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                  </div>
                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Bimbel Gratis (LKP 45 Plus)</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Bimbingan Dalam Panti</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                        Bimbingan belajar gratis Matematika, Bahasa Inggris, dan PAI. Dilaksanakan Minggu di Masjid Al-Musyawarah, serta Selasa & Kamis di Panti Asuhan Wisma Putera.
+                        Anak binaan Bakti 45 Sejahtera, selain belajar di sekolah formal, dalam panti juga diberikan bimbingan belajar seperti PAI (keagamaan), Matematika, & Bahasa Inggris, serta bimbingan sesuai minat & bakat, di antaranya latihan tari.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
                         <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
