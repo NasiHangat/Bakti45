@@ -329,27 +329,27 @@ export default function Home() {
                        <div className="flex justify-between items-start mb-6">
                           <div>
                              <p className="text-sm text-gray-500 font-semibold uppercase">Bank Transfer</p>
-                             <h4 className="text-2xl font-bold text-brand-blue mt-1">----</h4>
+                             <h4 className="text-2xl font-bold text-brand-blue mt-1">BNI</h4>
                           </div>
-                          <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">---</div>
+                          <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">BNI</div>
                        </div>
 
                        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 mb-4 flex justify-between items-center">
                           <div>
                              <p className="text-xs text-gray-400 mb-1">Nomor Rekening</p>
-                             <p className="text-xl md:text-2xl font-mono font-bold tracking-wider text-gray-800">0000 0000 0000</p>
+                             <p className="text-xl md:text-2xl font-mono font-bold tracking-wider text-gray-800">0840 4020 01</p>
                           </div>
                           <button 
                             className="p-2 hover:bg-white rounded-lg transition-colors text-brand-blue"
                             title="Salin Nomor"
-                            onClick={() => { navigator.clipboard.writeText('0000 0000 0000'); alert('Nomor Rekening Disalin!'); }}
+                            onClick={() => { navigator.clipboard.writeText('0840 4020 01'); alert('Nomor Rekening Disalin!'); }}
                           >
                              <Copy className="w-5 h-5" />
                           </button>
                        </div>
 
                        <p className="text-sm text-center text-gray-500">
-                          a.n. <strong>Yayasan Bakti 45 Peduli</strong>
+                          a.n. <strong>Yayasan Bakti 45 Sejahtera</strong>
                        </p>
                     </div>
                  </div>
