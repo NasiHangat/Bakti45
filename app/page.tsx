@@ -12,8 +12,8 @@ export default function Home() {
       {/* =========================================
           1. HERO SECTION 
       ========================================= */}
-      <section className="relative bg-gradient-to-br from-brand-blue via-blue-900 to-brand-blue text-white overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+      <section className="relative bg-gradient-to-br from-cyan-500 via-blue-400 to-sky-500 text-white overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
@@ -22,42 +22,54 @@ export default function Home() {
               
               {/* --- BADGE LEGALITAS  --- */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
-                    <ShieldCheck className="w-4 h-4" />
+                  {/* Badge Kemenkumham */}
+                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white font-medium text-sm shadow-lg hover:bg-white/30 transition-all">
+                    <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
                     <span>Terdaftar Resmi Kemenkumham</span>
                   </div>
-                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
-                    <Award className="w-4 h-4" />
+
+                  {/* Badge Kemensos */}
+                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-yellow-400/90 backdrop-blur-md border border-yellow-300 text-blue-900 font-medium text-sm shadow-lg hover:bg-yellow-400 transition-all">
+                    <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center shadow-md">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                      </svg>
+                    </div>
                     <span>Terakreditasi B Kemensos RI</span>
                   </div>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
                 Menebar Kasih, <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-200 to-white">
                   Merajut Masa Depan
                 </span>
               </h1>
               
-              <p className="text-lg text-blue-100 leading-relaxed max-w-lg mx-auto md:mx-0">
+              <p className="text-lg text-white/95 leading-relaxed max-w-lg mx-auto md:mx-0 drop-shadow">
                 Wujudkan kepedulian nyata untuk membantu mereka yang membutuhkan akses pendidikan dan kehidupan layak.
               </p>
               
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                 <Link href="#donasi" className="bg-brand-yellow text-brand-blue font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-yellow-500/50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                 <Link href="#donasi" className="bg-yellow-400 text-blue-900 font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-yellow-400/50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
                     <Heart className="w-5 h-5 fill-current" />
                     Mulai Berdonasi
                  </Link>
                  
-                 <Link href="https://wa.me/62881023512953?text=Halo%20Admin,%20saya%20berminat%20jadi%20relawan" className="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-white/50 hover:-translate-y-1 hover:bg-white hover:text-brand-blue transition-all flex items-center justify-center gap-2">
+                 <Link href="https://wa.me/62881023512953?text=Halo%20Admin,%20saya%20berminat%20jadi%20relawan" className="bg-white/20 backdrop-blur-md border-2 border-white/60 text-white font-bold py-4 px-8 rounded-full shadow-xl hover:bg-white hover:text-cyan-600 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
                     <Users className="w-5 h-5" />
                     Jadi Relawan
                  </Link>
               </div>
             </div>
 
+            {/* Hero Image */}
             <div className="md:w-1/2 relative">
-              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 rotate-3 hover:rotate-0 transition-all duration-500">
+              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur rotate-2 hover:rotate-0 transition-all duration-500">
                 <Image 
                   src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop"
                   alt="Keceriaan Anak Panti"

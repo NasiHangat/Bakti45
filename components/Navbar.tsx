@@ -11,12 +11,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Sembunyikan Navbar jika sedang di halaman Admin Studio
   if (pathname.startsWith("/studio")) {
     return null;
   }
 
-  // Efek Glassmorphism saat scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -42,7 +40,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-md py-4'
+          ? 'bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20 py-3'
           : 'bg-transparent py-6'
       }`}
     >
@@ -60,11 +58,10 @@ export default function Navbar() {
                 />
             </div>
             
-            <div className={`flex flex-col justify-center ${scrolled ? 'text-gray-800' : 'text-white'}`}>
-                <span className="font-bold text-lg leading-none tracking-tight">Yayasan</span>
-                <span className="text-sm font-medium opacity-95 leading-tight">Bakti 45 Sejahtera</span>
-                {/* --- TEKS TAMBAHAN --- */}
-                <span className="text-[10px] opacity-80 uppercase tracking-wide mt-0.5">
+            <div className={`flex flex-col justify-center transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+                <span className="font-bold text-lg leading-none tracking-tight drop-shadow-sm">Yayasan</span>
+                <span className="text-sm font-medium opacity-95 leading-tight drop-shadow-sm">Bakti 45 Sejahtera</span>
+                <span className="text-[10px] opacity-80 uppercase tracking-wide mt-0.5 drop-shadow-sm">
                   Rumah Cinta Yatim Piatu Duafa
                 </span>
             </div>
@@ -76,50 +73,57 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-medium text-sm transition-colors relative group ${
-                scrolled ? 'text-gray-600 hover:text-brand-blue' : 'text-blue-100 hover:text-white'
+              className={`font-medium text-sm transition-all relative group ${
+                scrolled 
+                  ? 'text-gray-700 hover:text-cyan-600 drop-shadow-sm' 
+                  : 'text-white/90 hover:text-white drop-shadow-md'
               } ${pathname === link.href ? 'font-bold' : ''}`}
             >
               {link.name}
-              {/* Garis bawah animasi saat hover */}
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all group-hover:w-full ${scrolled ? 'bg-brand-blue' : 'bg-brand-yellow'}`}></span>
+              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all group-hover:w-full ${
+                scrolled ? 'bg-cyan-500' : 'bg-yellow-400'
+              }`}></span>
             </Link>
           ))}
           
           <Link
             href="#donasi"
-            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 transform hover:scale-105 ${
+            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 transform hover:scale-105 shadow-lg ${
                 scrolled 
-                ? 'bg-brand-blue text-white hover:bg-brand-blue/90 shadow-lg shadow-blue-900/20' 
-                : 'bg-brand-yellow text-brand-blue hover:bg-yellow-400 shadow-lg shadow-yellow-500/20'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-cyan-500/30' 
+                : 'bg-yellow-400 text-blue-900 hover:bg-yellow-300 shadow-yellow-400/40'
             }`}
           >
-            <Heart className="w-4 h-4 fill-current animate-pulse" />
+            <Heart className="w-4 h-4 fill-current" />
             Donasi
           </Link>
         </div>
 
-        {/* MOBILE MENU BUTTON (Hamburger) */}
+        {/* Mobile ver */}
         <button
           className="md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-             <X className={`w-8 h-8 ${scrolled ? 'text-gray-800' : 'text-white'}`} />
+             <X className={`w-8 h-8 transition-colors ${scrolled ? 'text-gray-800' : 'text-white'}`} />
           ) : (
-             <Menu className={`w-8 h-8 ${scrolled ? 'text-brand-blue' : 'text-white'}`} />
+             <Menu className={`w-8 h-8 transition-colors ${scrolled ? 'text-gray-800' : 'text-white'}`} />
           )}
         </button>
       </div>
 
-      {/* MOBILE MENU DROPDOWN */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+      {/* Mobl dropdown */}
+      <div className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-b border-white/20 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="flex flex-col p-6 gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`font-medium text-lg border-b border-gray-50 pb-2 ${pathname === link.href ? 'text-brand-blue font-bold' : 'text-gray-600'}`}
+              className={`font-medium text-lg border-b border-gray-100 pb-3 transition-colors ${
+                pathname === link.href 
+                  ? 'text-cyan-600 font-bold' 
+                  : 'text-gray-700 hover:text-cyan-600'
+              }`}
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -127,7 +131,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#donasi"
-            className="bg-brand-blue text-white text-center py-4 rounded-xl font-bold mt-2 flex justify-center items-center gap-2"
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-4 rounded-xl font-bold mt-2 flex justify-center items-center gap-2 shadow-lg shadow-cyan-500/30 hover:from-cyan-600 hover:to-blue-600 transition-all"
             onClick={() => setIsOpen(false)}
           >
             <Heart className="w-5 h-5 fill-current" />
