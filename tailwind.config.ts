@@ -11,7 +11,7 @@ content: [
     extend: {
       colors: {
         brand: {
-          blue: "#0F4C81",   // Biru Panti
+          blue: "#1e5fba",   // Biru Panti
           yellow: "#F59E0B", // Kuning Ceria
           light: "#F3F4F6",  // Abu background
         }
