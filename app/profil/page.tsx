@@ -65,7 +65,7 @@ export default function ProfilPage() {
             <div className="md:w-1/2">
                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-gray-100 rotate-2 hover:rotate-0 transition-all duration-500">
                   <Image 
-                    src="/gambar_sejarah_yayasan.jpg"
+                    src="/bakti_sosial.jpg"
                     alt="Sejarah Yayasan"
                     width={600}
                     height={400}

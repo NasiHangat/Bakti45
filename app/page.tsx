@@ -71,7 +71,7 @@ export default function Home() {
             <div className="md:w-1/2 relative">
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur rotate-2 hover:rotate-0 transition-all duration-500">
                         <Image 
-                           src="/gambar_hero_section.jpg"
+                           src="/hero_section.jpg"
                            alt="Keceriaan Anak Panti"
                            width={600}
                            height={450}
@@ -101,7 +101,7 @@ export default function Home() {
                 <div className="absolute top-0 -left-4 w-24 h-24 bg-brand-yellow/20 rounded-full blur-xl"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-100 border border-gray-100">
                    <Image 
-                     src="/gambar_kebersamaan_panti.jpg"
+                     src="/kebersamaan_panti.jpg"
                      alt="Kebersamaan Panti"
                      fill
                      className="object-cover"
