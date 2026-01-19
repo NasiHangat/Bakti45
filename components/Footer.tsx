@@ -41,7 +41,6 @@ export default function Footer() {
               Mari bersama kami menjadi jembatan kebaikan bagi anak-anak yatim dan dhuafa untuk meraih masa depan yang mandiri.
             </p>
             
-            {/* Social Media (Dipindah ke sini agar lebih accessible) */}
             <div className="flex gap-3 pt-2">
                {[Facebook, Instagram, Youtube].map((Icon, idx) => (
                  <a key={idx} href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
