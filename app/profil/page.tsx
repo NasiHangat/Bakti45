@@ -65,7 +65,7 @@ export default function ProfilPage() {
             <div className="md:w-1/2">
                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-gray-100 rotate-2 hover:rotate-0 transition-all duration-500">
                   <Image 
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop"
+                    src="/gambar_sejarah_yayasan.jpg"
                     alt="Sejarah Yayasan"
                     width={600}
                     height={400}
@@ -98,10 +98,10 @@ export default function ProfilPage() {
         </div>
       </section>
 
-      {/* =========================================
-          3. LEGALITAS LENGKAP 
-      ========================================= */}
-      <section className="py-20 bg-gray-50 border-y border-gray-200">
+        {/* =========================================
+           3. LEGALITAS LENGKAP 
+        ========================================= */}
+        <section id="legalitas" className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-6">
            <div className="text-center mb-12">
              <h2 className="text-3xl font-bold text-gray-900 mb-4">Legalitas & Akreditasi Resmi</h2>

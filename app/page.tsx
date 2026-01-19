@@ -70,14 +70,14 @@ export default function Home() {
             {/* Hero Image */}
             <div className="md:w-1/2 relative">
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur rotate-2 hover:rotate-0 transition-all duration-500">
-                <Image 
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop"
-                  alt="Keceriaan Anak Panti"
-                  width={600}
-                  height={450}
-                  className="object-cover w-full h-full"
-                  priority
-                />
+                        <Image 
+                           src="/gambar_hero_section.jpg"
+                           alt="Keceriaan Anak Panti"
+                           width={600}
+                           height={450}
+                           className="object-cover w-full h-full"
+                           priority
+                        />
               </div>
             </div>
           </div>
@@ -97,11 +97,11 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-start gap-16">
              {/* Foto Profil */}
-             <div className="md:w-1/2 relative sticky top-24">
+             <div className="md:w-1/2 sticky top-24">
                 <div className="absolute top-0 -left-4 w-24 h-24 bg-brand-yellow/20 rounded-full blur-xl"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-100 border border-gray-100">
                    <Image 
-                     src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop"
+                     src="/gambar_kebersamaan_panti.jpg"
                      alt="Kebersamaan Panti"
                      fill
                      className="object-cover"
@@ -172,7 +172,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="https://images.unsplash.com/photo-1529390003868-6c01d73923f0?q=80&w=1000&auto=format&fit=crop"
+                      src="/program_anak_asuh.jpg"
                       alt="Program Anak Asuh"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -199,7 +199,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop"
+                      src="/bakti_sosial.jpg"
                       alt="Bakti Sosial"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -223,7 +223,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000&auto=format&fit=crop"
+                      src="/bimbingan_dalam_panti.jpg"
                       alt="Bimbel Gratis"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -247,7 +247,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto=format&fit=crop"
+                      src="/kemitraan_dan_kegiatan_lain.jpg"
                       alt="Kegiatan Lain"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -335,9 +335,9 @@ export default function Home() {
 
                  <div className="md:w-1/2 w-full">
                     <div className="bg-white rounded-2xl p-6 shadow-xl text-gray-800 relative group">
-                       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-yellow to-brand-blue rounded-t-2xl"></div>
+                       <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-r from-brand-yellow to-brand-blue rounded-t-2xl"></div>
                        
-                       <div className="flex justify-between items-start mb-6">
+                       <div className="flex justify-between items-start mb-6 mt-3">
                           <div>
                              <p className="text-sm text-gray-500 font-semibold uppercase">Bank Transfer</p>
                              <h4 className="text-2xl font-bold text-brand-blue mt-1">BNI</h4>

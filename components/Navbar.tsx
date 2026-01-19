@@ -87,7 +87,7 @@ export default function Navbar() {
           ))}
           
           <Link
-            href="#donasi"
+            href="/profil#legalitas"
             className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2 transform hover:scale-105 shadow-lg ${
                 scrolled 
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-cyan-500/30' 
@@ -130,7 +130,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#donasi"
+            href="/profil#legalitas"
             className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-4 rounded-xl font-bold mt-2 flex justify-center items-center gap-2 shadow-lg shadow-cyan-500/30 hover:from-cyan-600 hover:to-blue-600 transition-all"
             onClick={() => setIsOpen(false)}
           >

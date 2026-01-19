@@ -48,11 +48,15 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-3 pt-2">
-               {[Facebook, Instagram, Youtube].map((Icon, idx) => (
-                 <a key={idx} href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
-                    <Icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                 </a>
-               ))}
+              {[
+                { Icon: Facebook, href: 'https://www.facebook.com/Bakti45sejahtera/' },
+                { Icon: Instagram, href: 'https://www.instagram.com/bakti45bdg' },
+                { Icon: Youtube, href: 'https://www.youtube.com/' },
+              ].map(({ Icon, href }, idx) => (
+                <a key={idx} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                  <Icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </a>
+              ))}
             </div>
           </div>
 
