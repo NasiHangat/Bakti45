@@ -2,13 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // Untuk mendeteksi halaman aktif
+import Image from 'next/image'; // <--- 1. Import Image Component
+import { usePathname } from 'next/navigation';
 import { Menu, X, Heart } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Sembunyikan Navbar jika sedang di halaman Admin Studio
+  if (pathname.startsWith("/studio")) {
+    return null;
+  }
 
   // Efek Glassmorphism saat scroll
   useEffect(() => {
@@ -23,13 +29,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // DAFTAR MENU (Sesuai Sitemap)
+  // DAFTAR MENU
   const navLinks = [
     { name: 'Beranda', href: '/' },
-    { name: 'Tentang Kami', href: '/profil' }, // Mencakup Sejarah, Legalitas, Pengurus
-    { name: 'Program', href: '/#program' },     // Mengarah ke Section Program di Home
-    { name: 'Berita', href: '/kegiatan' },      // Update Kegiatan (CMS)
-    { name: 'Kontak', href: '/kontak' },        // Lokasi & Tombol WA
+    { name: 'Tentang Kami', href: '/profil' },
+    { name: 'Program', href: '/#program' },
+    { name: 'Berita', href: '/kegiatan' },
+    { name: 'Kontak', href: '/kontak' },
   ];
 
   return (
@@ -43,13 +49,20 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         
         {/* LOGO BRAND */}
-        <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center text-brand-blue font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform">
-                45
+        <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 group-hover:rotate-6 transition-transform">
+                <Image 
+                    src="/logo45.png" 
+                    alt="Logo Yayasan Bakti 45" 
+                    width={48} 
+                    height={48}
+                    className="object-contain drop-shadow-md"
+                />
             </div>
+            
             <div className={`flex flex-col ${scrolled ? 'text-gray-800' : 'text-white'}`}>
                 <span className="font-bold text-lg leading-none tracking-tight">Yayasan</span>
-                <span className="text-sm font-medium opacity-80">Bakti 45 Sejahtera</span>
+                <span className="text-sm font-medium opacity-90">Bakti 45 Sejahtera</span>
             </div>
         </Link>
 

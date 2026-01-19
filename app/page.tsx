@@ -35,9 +35,18 @@ export default function Home() {
                 Wujudkan kepedulian nyata untuk membantu mereka yang membutuhkan akses pendidikan dan kehidupan layak.
               </p>
               
-              <div className="pt-4 flex justify-center md:justify-start">
-                 <Link href="#donasi" className="bg-brand-yellow text-brand-blue font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-yellow-500/50 hover:-translate-y-1 transition-all">
+              {/* TOMBOL HERO (UPDATED ANIMATION) */}
+              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                 {/* Tombol Utama: Donasi */}
+                 <Link href="#donasi" className="bg-brand-yellow text-brand-blue font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-yellow-500/50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                    <Heart className="w-5 h-5 fill-current" />
                     Mulai Berdonasi
+                 </Link>
+                 
+                 {/* Tombol Sekunder: Jadi Relawan (ANIMASI DITAMBAHKAN) */}
+                 <Link href="https://wa.me/62881023512953?text=Halo%20Admin,%20saya%20berminat%20jadi%20relawan" className="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-white/50 hover:-translate-y-1 hover:bg-white hover:text-brand-blue transition-all flex items-center justify-center gap-2">
+                    <Users className="w-5 h-5" />
+                    Jadi Relawan
                  </Link>
               </div>
             </div>
@@ -65,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          2. SEKILAS PROFIL (VISI & MISI UPDATED) 
+          2. SEKILAS PROFIL 
       ========================================= */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -131,9 +140,9 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          3. PROGRAM YAYASAN (FOTO VERSION)
+          3. PROGRAM YAYASAN
       ========================================= */}
-      <section className="py-24 bg-gray-50 relative">
+      <section id="program" className="py-24 bg-gray-50 relative">
         <div className="container mx-auto px-6">
            <div className="text-center mb-16 max-w-2xl mx-auto">
              <h2 className="text-3xl font-bold text-gray-900 mb-4">Program Yayasan</h2>
@@ -245,6 +254,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* =========================================
+          SECTION AJAKAN RELAWAN 
+      ========================================= */}
+      <section className="py-20 bg-brand-yellow/10 border-y border-brand-yellow/20 relative overflow-hidden">
+        <div className="absolute -left-10 top-0 w-40 h-40 bg-brand-yellow/20 rounded-full blur-3xl"></div>
+        <div className="absolute right-0 bottom-0 w-60 h-60 bg-brand-blue/10 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto px-6 relative z-10 text-center">
+           <span className="inline-block py-1 px-3 rounded-full bg-brand-yellow/20 text-brand-blue font-bold text-xs uppercase tracking-wider mb-4 border border-brand-yellow/30">
+              Panggilan Kemanusiaan
+           </span>
+           
+           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto">
+             Bukan Hanya Materi, <br/>
+             <span className="text-brand-blue">Tenaga & Keahlian Anda</span> Sangat Berarti.
+           </h2>
+           
+           <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+             Kami sangat terbuka bagi mahasiswa, profesional, maupun masyarakat umum yang ingin menjadi relawan. 
+             Mari mengajar bimbel, menjadi kakak asuh, atau membantu kegiatan operasional panti.
+           </p>
+
+           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="https://wa.me/628123456789?text=Halo%20Admin,%20saya%20berminat%20menjadi%20relawan%20di%20Bakti%2045"
+                className="bg-brand-blue text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1 transition-all flex items-center gap-2"
+              >
+                 <Users className="w-5 h-5" />
+                 Daftar Jadi Relawan
+              </Link>
+              <Link 
+                href="/profil" 
+                className="text-brand-blue font-semibold py-3 px-6 hover:bg-blue-50 rounded-xl transition-colors"
+              >
+                 Pelajari Syarat & Ketentuan
+              </Link>
+           </div>
+        </div>
+      </section>
+      
       {/* =========================================
           4. CTA DONASI 
       ========================================= */}
