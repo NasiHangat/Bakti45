@@ -1,12 +1,12 @@
 import type { Config } from "tailwindcss"; 
 
 const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    // Folder studio/sanity biasanya tidak butuh tailwind, jadi tidak perlu dimasukkan
-  ],
+content: [
+  "./app/**/*.{js,ts,jsx,tsx,mdx}", 
+  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}",
+],
+
   theme: {
     extend: {
       colors: {
