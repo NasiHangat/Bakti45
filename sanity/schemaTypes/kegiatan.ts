@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { BookIcon } from '@sanity/icons' // 1. Import Icon bawaan Sanity
 
 export default defineType({
   name: 'kegiatan',
   title: 'Berita Kegiatan',
   type: 'document',
+  icon: BookIcon, // 2. Pasang Icon di sini (Akan muncul di Sidebar Kiri)
   fields: [
     defineField({
       name: 'title',
@@ -32,7 +34,7 @@ export default defineType({
       title: 'Foto Utama',
       type: 'image',
       options: {
-        hotspot: true, 
+        hotspot: true,
       },
     }),
     defineField({
@@ -42,4 +44,24 @@ export default defineType({
       of: [{ type: 'block' }],
     }),
   ],
+
+  // 3. Konfigurasi Tampilan List (PREVIEW)
+  preview: {
+    select: {
+      title: 'title',
+      media: 'mainImage',
+      date: 'publishedAt'
+    },
+    prepare(selection) {
+      const { title, media, date } = selection
+      return {
+        title: title,
+        // Menampilkan tanggal sebagai subtitle agar admin lebih informatif
+        subtitle: date ? new Date(date).toLocaleDateString('id-ID', {
+            day: 'numeric', month: 'long', year: 'numeric'
+        }) : 'Belum dipublikasi',
+        media: media // Menampilkan thumbnail foto di list
+      }
+    },
+  },
 })

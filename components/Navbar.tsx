@@ -49,7 +49,7 @@ export default function Navbar() {
             </div>
             <div className={`flex flex-col ${scrolled ? 'text-gray-800' : 'text-white'}`}>
                 <span className="font-bold text-lg leading-none tracking-tight">Yayasan</span>
-                <span className="text-sm font-medium opacity-80">Bakti 45</span>
+                <span className="text-sm font-medium opacity-80">Bakti 45 Sejahtera</span>
             </div>
         </Link>
 
