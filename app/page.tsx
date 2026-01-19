@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// 1. Tambahkan import 'Award'
 import { Heart, Users, BookOpen, ArrowRight, CheckCircle, Copy, ShieldCheck, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
@@ -21,7 +20,7 @@ export default function Home() {
             
             <div className="md:w-1/2 space-y-6 text-center md:text-left">
               
-              {/* --- BADGE LEGALITAS (UPDATED) --- */}
+              {/* --- BADGE LEGALITAS  --- */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow font-medium text-sm">
                     <ShieldCheck className="w-4 h-4" />

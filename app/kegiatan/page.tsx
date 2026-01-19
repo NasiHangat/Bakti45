@@ -6,7 +6,6 @@ import { Calendar, User, ArrowRight, Heart, BookOpen, Users, GraduationCap, Star
 
 export default function KegiatanPage() {
 
-  // DATA DUMMY: Kegiatan Rutin (Sesuai Request)
   const routineActivities = [
     {
       title: "Jum'at Berkah",
