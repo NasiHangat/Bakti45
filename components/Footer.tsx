@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-brand-blue text-white pt-20 pb-10 overflow-hidden">
-      
+
       {/* --- BACKGROUND DECORATION --- */}
       {/* Pola Titik-titik Halus */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
@@ -16,37 +16,37 @@ export default function Footer() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-12 gap-12 mb-16">
-          
+
           {/* KOLOM 1: IDENTITAS (Lebar 5 kolom) */}
           <div className="md:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
-               <div className="relative w-16 h-16 bg-white rounded-2xl p-2 shadow-lg shadow-blue-900/50 flex items-center justify-center shrink-0">
-                  <Image 
-                    src="/logo45.png" 
-                    alt="Logo Yayasan" 
-                    width={50} 
-                    height={50}
-                    className="object-contain"
-                  />
-               </div>
-               <div>
-                  <h3 className="font-bold text-2xl leading-none tracking-tight">Yayasan <br/>Bakti 45 Sejahtera</h3>
-                  
-                  {/* --- TEKS TAMBAHAN --- */}
-                  <span className="block text-xs font-medium text-blue-200 mt-1 uppercase tracking-wide opacity-80">
-                    Rumah Cinta Yatim Piatu Duafa
-                  </span>
+              <div className="relative w-16 h-16 bg-white rounded-2xl p-2 shadow-lg shadow-blue-900/50 flex items-center justify-center shrink-0">
+                <Image
+                  src="/logo45.png"
+                  alt="Logo Yayasan"
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-2xl leading-none tracking-tight">Yayasan <br />Bakti 45 Sejahtera</h3>
 
-                  <span className="inline-block mt-3 px-3 py-1 bg-white/10 rounded-full text-[10px] font-medium tracking-wide border border-white/20 text-brand-yellow">
-                    AHU-0017530.AH.01.06.
-                  </span>
-               </div>
+                {/* --- TEKS TAMBAHAN --- */}
+                <span className="block text-xs font-medium text-blue-200 mt-1 uppercase tracking-wide opacity-80">
+                  Rumah Cinta Yatim Piatu Duafa
+                </span>
+
+                <span className="inline-block mt-3 px-3 py-1 bg-white/10 rounded-full text-[10px] font-medium tracking-wide border border-white/20 text-brand-yellow">
+                  AHU-0017530.AH.01.06.
+                </span>
+              </div>
             </div>
             <p className="text-blue-100 leading-relaxed text-sm md:text-base max-w-md">
-              "Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain." <br/>
+              "Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain." <br />
               Mari bersama kami menjadi jembatan kebaikan bagi anak-anak yatim dan dhuafa untuk meraih masa depan yang mandiri.
             </p>
-            
+
             <div className="flex gap-3 pt-2">
               {[
                 { Icon: Facebook, href: 'https://www.facebook.com/Bakti45sejahtera/' },
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* KOLOM 3: NEWSLETTER & KONTAK (Lebar 4 kolom) */}
           <div className="md:col-span-4 space-y-8">
-            
+
             {/* Widget Kontak */}
             <div>
               <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
@@ -98,13 +98,13 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-brand-yellow">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <span className="opacity-90 leading-relaxed">Jl. Nagrak Kulon RT.03 RW.09, Sukajaya, Kecamatan Lembang, <br/>Kab.Bandung Barat, 40391</span>
+                  <span className="opacity-90 leading-relaxed">Jl. Nagrak Kulon RT.03 RW.09, Sukajaya, Kecamatan Lembang, <br />Kab.Bandung Barat, 40391</span>
                 </li>
                 <li className="flex items-center gap-4">
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-brand-yellow">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <span className="opacity-90 font-mono text-base">+62 881-0235-12953 <br/> +62 8965-2244-458 <br/>+62 8788-5815-328</span>
+                  <span className="opacity-90 font-mono text-base">+62 881-0235-12953 <br /> +62 8965-2244-458 <br />+62 8788-5815-328</span>
                 </li>
               </ul>
             </div>
@@ -118,8 +118,8 @@ export default function Footer() {
             &copy; {currentYear} <strong>Yayasan Bakti 45 Sejahtera</strong>. Dilindungi Undang-undang.
           </p>
           <div className="flex gap-6">
-             <Link href="#" className="hover:text-white transition-colors">Kebijakan Privasi</Link>
-             <Link href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</Link>
+            <Link href="#" className="hover:text-white transition-colors">Kebijakan Privasi</Link>
+            <Link href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</Link>
           </div>
         </div>
       </div>
