@@ -38,6 +38,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Ringkasan Singkat',
+      type: 'text',
+      description: 'Deskripsi singkat untuk ditampilkan di halaman daftar kegiatan (maksimal 200 karakter)',
+      validation: (rule) => rule.max(200),
+    }),
+    defineField({
       name: 'body',
       title: 'Isi Berita',
       type: 'array',
@@ -58,7 +65,7 @@ export default defineType({
         title: title,
         // Menampilkan tanggal sebagai subtitle agar admin lebih informatif
         subtitle: date ? new Date(date).toLocaleDateString('id-ID', {
-            day: 'numeric', month: 'long', year: 'numeric'
+          day: 'numeric', month: 'long', year: 'numeric'
         }) : 'Belum dipublikasi',
         media: media // Menampilkan thumbnail foto di list
       }
