@@ -38,7 +38,7 @@ export default function Footer() {
                 </span>
 
                 <span className="inline-block mt-3 px-3 py-1 bg-white/10 rounded-full text-[10px] font-medium tracking-wide border border-white/20 text-brand-yellow">
-                  AHU-0017530.AH.01.06.
+                  AHU-0008346.AH.01.04.
                 </span>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-brand-yellow">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <span className="opacity-90 font-mono text-base">+62 881-0235-12953 <br /> +62 8965-2244-458 <br />+62 8788-5815-328</span>
+                  <span className="opacity-90 font-mono text-base">+62 881-0235-12953 <br /> +62 896-5224-4458 <br />+62 878-8581-5328</span>
                 </li>
               </ul>
             </div>

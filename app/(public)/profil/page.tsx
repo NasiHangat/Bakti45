@@ -119,7 +119,7 @@ export default function ProfilPage() {
                     <h3 className="font-bold text-gray-900">Badan Hukum Resmi</h3>
                     <p className="text-xs text-gray-500 mb-2">Kementerian Hukum & HAM RI</p>
                     <span className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1.5 rounded-md font-mono">
-                      AHU-0017530.AH.01.06.
+                      AHU-0008346.AH.01.04.Tahun 2019
                     </span>
                  </div>
               </div>
