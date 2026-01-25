@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle, ArrowUpRight, Copy } from "lucide-react";
 
 export default function KontakPage() {
   
@@ -13,23 +13,23 @@ export default function KontakPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 font-sans selection:bg-brand-yellow selection:text-brand-blue">
+    <main className="min-h-screen bg-gray-50 font-sans selection:bg-brand-yellow selection:text-blue-600">
       
       {/* =========================================
-          1. HEADER SECTION (Updated Decoration)
+          1. HEADER SECTION (Updated Gradient)
       ========================================= */}
-      <section className="relative pt-44 pb-24 bg-brand-blue text-white overflow-hidden">
+      <section className="relative pt-44 pb-24 bg-gradient-to-br from-cyan-500 via-blue-400 to-sky-500 text-white overflow-hidden">
         {/* Dekorasi Background */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-        <div className="absolute -left-20 top-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute right-0 bottom-0 w-80 h-80 bg-brand-yellow/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute -left-20 top-20 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute right-0 bottom-0 w-80 h-80 bg-cyan-300/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-            <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-brand-yellow font-bold text-xs uppercase tracking-wider mb-4 backdrop-blur-md">
+            <span className="inline-block py-1 px-4 rounded-full bg-white/20 border border-white/40 text-yellow-300 font-bold text-xs uppercase tracking-wider mb-4 backdrop-blur-md shadow-sm">
               Layanan Informasi
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Hubungi Kami</h1>
-            <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight drop-shadow-md">Hubungi Kami</h1>
+            <p className="text-blue-50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light drop-shadow-sm">
               Pintu kami selalu terbuka. Jangan ragu untuk menyapa, bertanya seputar program, atau sekadar bersilaturahmi.
             </p>
         </div>
@@ -40,7 +40,7 @@ export default function KontakPage() {
       ========================================= */}
       <section className="py-20 -mt-10 relative z-20">
         <div className="container mx-auto px-6">
-          <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-900/5 border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-cyan-900/10 border border-gray-100 overflow-hidden">
             <div className="grid lg:grid-cols-2">
             
               {/* --- KOLOM KIRI: INFO KONTAK --- */}
@@ -54,8 +54,8 @@ export default function KontakPage() {
 
                  <div className="space-y-6">
                     {/* Card: Alamat */}
-                    <div className="group flex items-start gap-5 p-4 rounded-2xl hover:bg-blue-50/50 transition-colors border border-transparent hover:border-blue-100">
-                       <div className="bg-blue-100 text-brand-blue p-3.5 rounded-xl shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="group flex items-start gap-5 p-4 rounded-2xl hover:bg-cyan-50/50 transition-colors border border-transparent hover:border-cyan-100">
+                       <div className="bg-cyan-50 text-cyan-600 p-3.5 rounded-xl shrink-0 group-hover:scale-110 transition-transform">
                           <MapPin className="w-6 h-6" />
                        </div>
                        <div>
@@ -122,10 +122,10 @@ export default function KontakPage() {
                  {/* Social Media Link */}
                  <div className="pt-8 border-t border-gray-100">
                     <Link 
-                      href="https://instagram.com" 
-                      className="inline-flex items-center gap-3 text-gray-500 hover:text-brand-blue font-semibold transition-colors group"
+                      href="https://www.instagram.com/bakti45bdg" 
+                      className="inline-flex items-center gap-3 text-gray-500 hover:text-cyan-600 font-semibold transition-colors group"
                     >
-                       <span className="bg-gradient-to-tr from-yellow-400 to-purple-500 text-white p-2 rounded-lg group-hover:scale-110 transition-transform">
+                       <span className="bg-gradient-to-tr from-yellow-400 to-orange-500 text-white p-2 rounded-lg group-hover:scale-110 transition-transform shadow-sm">
                           <Instagram className="w-5 h-5" />
                        </span>
                        Ikuti keseharian kami di Instagram
@@ -135,7 +135,7 @@ export default function KontakPage() {
               </div>
 
               {/* --- KOLOM KANAN: MAP (Full Height) --- */}
-              <div className="relative min-h-[400px] lg:min-h-full h-full bg-gray-200 lg:rounded-r-[2.5rem] lg:rounded-bl-none overflow-hidden">
+              <div className="relative min-h-[400px] lg:min-h-full h-full bg-gray-200 lg:rounded-r-[2.5rem] lg:rounded-bl-none overflow-hidden border-l border-gray-100">
                  {/* Overlay Gradient untuk transisi halus */}
                  <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/5 to-transparent z-10 pointer-events-none"></div>
                  
@@ -150,13 +150,13 @@ export default function KontakPage() {
                    className="w-full h-full"
                  ></iframe>
                  
-                 {/* Floating Badge di atas Peta */}
-                 <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50 z-20 flex justify-between items-center">
+                 {/* Floating Badge di atas Peta (Updated Colors) */}
+                 <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50 z-20 flex justify-between items-center">
                     <div>
                         <p className="text-xs text-gray-500 font-bold uppercase mb-1">Lokasi Kami</p>
                         <p className="text-sm font-bold text-gray-800">Kecamatan Lembang, Bandung Barat</p>
                     </div>
-                    <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white animate-pulse">
+                    <div className="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center text-white animate-pulse shadow-md">
                         <MapPin className="w-5 h-5" />
                     </div>
                  </div>

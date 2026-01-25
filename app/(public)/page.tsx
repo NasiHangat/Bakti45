@@ -7,11 +7,12 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans selection:bg-brand-yellow selection:text-brand-blue">
+    <main className="min-h-screen bg-white font-sans selection:bg-brand-yellow selection:text-blue-600">
       
       {/* =========================================
           1. HERO SECTION 
       ========================================= */}
+      {/* UPDATE: Menggunakan warna biru cerah sebagai warna utama */}
       <section className="relative bg-gradient-to-br from-cyan-500 via-blue-400 to-sky-500 text-white overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
         
@@ -25,9 +26,7 @@ export default function Home() {
                   {/* Badge Kemenkumham */}
                   <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white font-medium text-sm shadow-lg hover:bg-white/30 transition-all">
                     <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
-                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
+                      <ShieldCheck className="w-3 h-3 text-white" />
                     </div>
                     <span>Terdaftar Resmi Kemenkumham</span>
                   </div>
@@ -35,9 +34,7 @@ export default function Home() {
                   {/* Badge Kemensos */}
                   <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-yellow-400/90 backdrop-blur-md border border-yellow-300 text-blue-900 font-medium text-sm shadow-lg hover:bg-yellow-400 transition-all">
                     <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center shadow-md">
-                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                      </svg>
+                      <Award className="w-3 h-3 text-white" />
                     </div>
                     <span>Terakreditasi B Kemensos RI</span>
                   </div>
@@ -70,14 +67,14 @@ export default function Home() {
             {/* Hero Image */}
             <div className="md:w-1/2 relative">
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur rotate-2 hover:rotate-0 transition-all duration-500">
-                        <Image 
-                           src="/hero_section.jpg"
-                           alt="Keceriaan Anak Panti"
-                           width={600}
-                           height={450}
-                           className="object-cover w-full h-full"
-                           priority
-                        />
+                <Image 
+                  src="/hero_section.jpg" // Pastikan file gambar ini ada di folder public
+                  alt="Keceriaan Anak Panti"
+                  width={600}
+                  height={450}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -97,11 +94,11 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-start gap-16">
              {/* Foto Profil */}
-             <div className="md:w-1/2 sticky top-24">
-                <div className="absolute top-0 -left-4 w-24 h-24 bg-brand-yellow/20 rounded-full blur-xl"></div>
+             <div className="md:w-1/2 relative sticky top-24">
+                <div className="absolute top-0 -left-4 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-100 border border-gray-100">
                    <Image 
-                     src="/kebersamaan_panti.jpg"
+                     src="/kebersamaan_panti.jpg" // Pastikan file gambar ini ada
                      alt="Kebersamaan Panti"
                      fill
                      className="object-cover"
@@ -118,17 +115,17 @@ export default function Home() {
              {/* Teks Visi Misi */}
              <div className="md:w-1/2 space-y-8">
                 <div>
-                    <span className="text-brand-blue font-bold tracking-wider text-sm uppercase mb-2 block">Visi Yayasan</span>
+                    <span className="text-cyan-600 font-bold tracking-wider text-sm uppercase mb-2 block">Visi Yayasan</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                     Mewujudkan Kesejahteraan & Generasi Mandiri
                     </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed mt-4 bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                    <p className="text-gray-600 text-lg leading-relaxed mt-4 bg-cyan-50/50 p-6 rounded-2xl border border-cyan-100">
                     "Menjadi lembaga sosial terpercaya, ikut andil dalam mensejahterakan masyarakat kurang mampu yang terbatas mendapat akses pendidikan dan kehidupan layak juga berkontribusi dalam membangun generasi muda yang peduli, mandiri, kreatif, dan inovatif."
                     </p>
                 </div>
                 
                 <div>
-                    <span className="text-brand-blue font-bold tracking-wider text-sm uppercase mb-4 block">Misi Kami</span>
+                    <span className="text-cyan-600 font-bold tracking-wider text-sm uppercase mb-4 block">Misi Kami</span>
                     <div className="space-y-4">
                         {[
                             "Menyelenggarakan kegiatan sosial kreatif berbasis generasi muda sebagai pusat kegiatan.",
@@ -137,8 +134,8 @@ export default function Home() {
                             "Mewujudkan generasi muda yang peduli, mandiri, kreatif dan inovatif melalui pemberdayaan masyarakat."
                         ].map((item, idx) => (
                             <div key={idx} className="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-xl transition-colors">
-                                <div className="bg-brand-yellow/10 p-2 rounded-full shrink-0 mt-0.5">
-                                    <CheckCircle className="w-5 h-5 text-brand-yellow" />
+                                <div className="bg-yellow-400/20 p-2 rounded-full shrink-0 mt-0.5">
+                                    <CheckCircle className="w-5 h-5 text-yellow-600" />
                                 </div>
                                 <p className="text-gray-700 leading-relaxed">{item}</p>
                             </div>
@@ -147,7 +144,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4">
-                   <Link href="/profil" className="text-brand-blue font-bold hover:text-brand-yellow transition-colors inline-flex items-center gap-2 group">
+                   <Link href="/profil" className="text-cyan-600 font-bold hover:text-yellow-500 transition-colors inline-flex items-center gap-2 group">
                       Lihat Sejarah Lengkap <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                    </Link>
                 </div>
@@ -172,23 +169,23 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="/program_anak_asuh.jpg"
+                      src="/program_anak_asuh.jpg" // Pastikan file gambar ini ada
                       alt="Program Anak Asuh"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                     <div className="absolute bottom-4 left-6">
-                       <span className="bg-brand-yellow text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Unggulan</span>
+                       <span className="bg-yellow-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Unggulan</span>
                     </div>
                  </div>
                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Program Anak Asuh</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Program Anak Asuh</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                         Mengangkat anak asuh Yatim piatu duafa menjadi anak asuh utk mendapatkan tempat tinggal dan pendidian yg layak Minimal smpai jenjang SMA/K
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
+                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
                             Selengkapnya <ArrowRight className="w-4 h-4" />
                         </span>
                     </div>
@@ -199,7 +196,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="/bakti_sosial.jpg"
+                      src="/bakti_sosial.jpeg" // Pastikan file gambar ini ada
                       alt="Bakti Sosial"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -207,12 +204,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                  </div>
                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Bakti Sosial</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Bakti Sosial</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                         Santunan rutin setiap bulan Ramadhan dan momen tahunan khusus bagi fakir miskin, yatim piatu, lansia, dan penyandang disabilitas di wilayah sekitar yayasan.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
+                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
                             Selengkapnya <ArrowRight className="w-4 h-4" />
                         </span>
                     </div>
@@ -223,7 +220,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="/bimbingan_dalam_panti.jpg"
+                      src="/bimbingan_dalam_panti.jpg" // Pastikan file gambar ini ada
                       alt="Bimbel Gratis"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -231,12 +228,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                  </div>
                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Bimbingan Dalam Panti</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Bimbingan Dalam Panti</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                         Anak binaan Bakti 45 Sejahtera, selain belajar di sekolah formal, dalam panti juga diberikan bimbingan belajar seperti PAI (keagamaan), Matematika, & Bahasa Inggris, serta bimbingan sesuai minat & bakat, di antaranya latihan tari.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
+                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
                             Selengkapnya <ArrowRight className="w-4 h-4" />
                         </span>
                     </div>
@@ -247,7 +244,7 @@ export default function Home() {
               <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 group border border-gray-100 flex flex-col h-full">
                  <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src="/kemitraan_dan_kegiatan_lain.jpg"
+                      src="/kemitraan_dan_kegiatan_lain.jpg" // Pastikan file gambar ini ada
                       alt="Kegiatan Lain"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -255,12 +252,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                  </div>
                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-brand-blue transition-colors">Kemitraan & Kegiatan Lain</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Kemitraan & Kegiatan Lain</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                         Menerima mahasiswa KKN dari berbagai universitas, santunan lansia, serta aktif mengikuti pelatihan dan rapat kemitraan baik dengan instansi pemerintah maupun swasta.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-brand-blue font-semibold text-sm flex items-center gap-2">
+                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
                             Selengkapnya <ArrowRight className="w-4 h-4" />
                         </span>
                     </div>
@@ -274,18 +271,18 @@ export default function Home() {
       {/* =========================================
           SECTION AJAKAN RELAWAN 
       ========================================= */}
-      <section className="py-20 bg-brand-yellow/10 border-y border-brand-yellow/20 relative overflow-hidden">
-        <div className="absolute -left-10 top-0 w-40 h-40 bg-brand-yellow/20 rounded-full blur-3xl"></div>
-        <div className="absolute right-0 bottom-0 w-60 h-60 bg-brand-blue/10 rounded-full blur-3xl"></div>
+      <section className="py-20 bg-yellow-400/10 border-y border-yellow-400/20 relative overflow-hidden">
+        <div className="absolute -left-10 top-0 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute right-0 bottom-0 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
-           <span className="inline-block py-1 px-3 rounded-full bg-brand-yellow/20 text-brand-blue font-bold text-xs uppercase tracking-wider mb-4 border border-brand-yellow/30">
+           <span className="inline-block py-1 px-3 rounded-full bg-yellow-400/20 text-blue-800 font-bold text-xs uppercase tracking-wider mb-4 border border-yellow-400/30">
               Panggilan Kemanusiaan
            </span>
            
            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto">
              Bukan Hanya Materi, <br/>
-             <span className="text-brand-blue">Tenaga & Keahlian Anda</span> Sangat Berarti.
+             <span className="text-cyan-600">Tenaga & Keahlian Anda</span> Sangat Berarti.
            </h2>
            
            <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -296,14 +293,14 @@ export default function Home() {
            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <Link 
                 href="https://wa.me/628123456789?text=Halo%20Admin,%20saya%20berminat%20menjadi%20relawan%20di%20Bakti%2045"
-                className="bg-brand-blue text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1 transition-all flex items-center gap-2"
+                className="bg-cyan-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-cyan-600/20 hover:-translate-y-1 transition-all flex items-center gap-2"
               >
                  <Users className="w-5 h-5" />
                  Daftar Jadi Relawan
               </Link>
               <Link 
-                href="/profil" 
-                className="text-brand-blue font-semibold py-3 px-6 hover:bg-blue-50 rounded-xl transition-colors"
+                href="/profil#snk" 
+                className="text-cyan-600 font-semibold py-3 px-6 hover:bg-blue-50 rounded-xl transition-colors"
               >
                  Pelajari Syarat & Ketentuan
               </Link>
@@ -314,33 +311,34 @@ export default function Home() {
       {/* =========================================
           4. CTA DONASI 
       ========================================= */}
-      <section id="donasi" className="py-24 bg-brand-blue relative overflow-hidden text-white">
+      {/* UPDATE: Menggunakan warna biru cerah di sini juga */}
+      <section id="donasi" className="py-24 bg-gradient-to-br from-cyan-600 to-blue-600 relative overflow-hidden text-white">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-        <div className="absolute -right-20 -top-20 w-96 h-96 bg-brand-yellow/20 rounded-full blur-3xl"></div>
+        <div className="absolute -right-20 -top-20 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-6 relative z-10">
            <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-[2.5rem] border border-white/20 p-8 md:p-12 overflow-hidden shadow-2xl">
               <div className="flex flex-col md:flex-row gap-12 items-center">
                  
                  <div className="md:w-1/2 text-center md:text-left">
-                    <span className="text-brand-yellow font-bold tracking-wider text-sm uppercase mb-2 block">Mari Berbagi</span>
+                    <span className="text-yellow-300 font-bold tracking-wider text-sm uppercase mb-2 block">Mari Berbagi</span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">Uluran Tangan Anda, Senyuman Mereka.</h2>
-                    <p className="text-blue-100 mb-8 leading-relaxed">
+                    <p className="text-blue-50 mb-8 leading-relaxed">
                        Donasi Anda mendukung penuh program anak asuh, bimbel gratis, dan bakti sosial yang kami jalankan.
                     </p>
-                    <Link href="https://wa.me/628123456789?text=Assalamualaikum,%20saya%20mau%20konfirmasi%20donasi" className="inline-flex items-center justify-center gap-2 w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl transition-all">
+                    <Link href="https://wa.me/62881023512953?text=Assalamualaikum,%20saya%20mau%20konfirmasi%20donasi" className="inline-flex items-center justify-center gap-2 w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-green-500/40">
                        Konfirmasi Donasi via WA
                     </Link>
                  </div>
 
                  <div className="md:w-1/2 w-full">
                     <div className="bg-white rounded-2xl p-6 shadow-xl text-gray-800 relative group">
-                       <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-r from-brand-yellow to-brand-blue rounded-t-2xl"></div>
+                       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 to-cyan-500 rounded-t-2xl"></div>
                        
-                       <div className="flex justify-between items-start mb-6 mt-3">
+                       <div className="flex justify-between items-start mb-6 mt-4">
                           <div>
                              <p className="text-sm text-gray-500 font-semibold uppercase">Bank Transfer</p>
-                             <h4 className="text-2xl font-bold text-brand-blue mt-1">BNI</h4>
+                             <h4 className="text-2xl font-bold text-cyan-700 mt-1">BNI</h4>
                           </div>
                           <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-400 text-xs">BNI</div>
                        </div>
@@ -351,7 +349,7 @@ export default function Home() {
                              <p className="text-xl md:text-2xl font-mono font-bold tracking-wider text-gray-800">0840 4020 01</p>
                           </div>
                           <button 
-                            className="p-2 hover:bg-white rounded-lg transition-colors text-brand-blue"
+                            className="p-2 hover:bg-white rounded-lg transition-colors text-cyan-600"
                             title="Salin Nomor"
                             onClick={() => { navigator.clipboard.writeText('0840 4020 01'); alert('Nomor Rekening Disalin!'); }}
                           >
