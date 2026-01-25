@@ -185,9 +185,6 @@ export default function Home() {
                         Mengangkat anak asuh Yatim piatu duafa menjadi anak asuh utk mendapatkan tempat tinggal dan pendidian yg layak Minimal smpai jenjang SMA/K
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
-                            Selengkapnya <ArrowRight className="w-4 h-4" />
-                        </span>
                     </div>
                  </div>
               </div>
@@ -209,9 +206,6 @@ export default function Home() {
                         Santunan rutin setiap bulan Ramadhan dan momen tahunan khusus bagi fakir miskin, yatim piatu, lansia, dan penyandang disabilitas di wilayah sekitar yayasan.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
-                            Selengkapnya <ArrowRight className="w-4 h-4" />
-                        </span>
                     </div>
                  </div>
               </div>
@@ -233,9 +227,6 @@ export default function Home() {
                         Anak binaan Bakti 45 Sejahtera, selain belajar di sekolah formal, dalam panti juga diberikan bimbingan belajar seperti PAI (keagamaan), Matematika, & Bahasa Inggris, serta bimbingan sesuai minat & bakat, di antaranya latihan tari.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
-                            Selengkapnya <ArrowRight className="w-4 h-4" />
-                        </span>
                     </div>
                  </div>
               </div>
@@ -257,9 +248,6 @@ export default function Home() {
                         Menerima mahasiswa KKN dari berbagai universitas, santunan lansia, serta aktif mengikuti pelatihan dan rapat kemitraan baik dengan instansi pemerintah maupun swasta.
                     </p>
                     <div className="pt-4 border-t border-gray-100 mt-auto">
-                        <span className="text-cyan-600 font-semibold text-sm flex items-center gap-2">
-                            Selengkapnya <ArrowRight className="w-4 h-4" />
-                        </span>
                     </div>
                  </div>
               </div>
