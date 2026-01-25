@@ -103,7 +103,7 @@ export default function KontakPage() {
                            </div>
                            <div>
                               <h3 className="font-bold text-gray-900 text-sm mb-0.5">Email Resmi</h3>
-                              <p className="text-gray-600 text-sm">info@bakti45.org</p>
+                              <p className="text-gray-600 text-sm">empatlimaplus45@gmail.com</p>
                            </div>
                         </div>
 
@@ -113,7 +113,7 @@ export default function KontakPage() {
                            </div>
                            <div>
                               <h3 className="font-bold text-gray-900 text-sm mb-0.5">Jam Operasional</h3>
-                              <p className="text-gray-600 text-sm">08.00 - 17.00 WIB</p>
+                              <p className="text-gray-600 text-sm">24 Jam</p>
                            </div>
                         </div>
                     </div>
@@ -140,15 +140,15 @@ export default function KontakPage() {
                  <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/5 to-transparent z-10 pointer-events-none"></div>
                  
                  <iframe 
-                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.575841452395!2d107.633987!3d-6.821367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDknMTYuOSJTIDEwN8KwMzgnMDIuNCJF!5e0!3m2!1sen!2sid!4v1631234567890"
-                   width="100%" 
-                   height="100%" 
-                   style={{ border: 0, position: 'absolute', top: 0, left: 0, filter: 'grayscale(0.1)' }} 
-                   allowFullScreen={true} 
-                   loading="lazy" 
-                   referrerPolicy="no-referrer-when-downgrade"
-                   className="w-full h-full"
-                 ></iframe>
+                  src="https://maps.google.com/maps?q=-6.7967881,107.5954524&hl=id&z=16&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, position: 'absolute', top: 0, left: 0, filter: 'grayscale(0.1)' }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                  ></iframe>
                  
                  {/* Floating Badge di atas Peta (Updated Colors) */}
                  <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50 z-20 flex justify-between items-center">
