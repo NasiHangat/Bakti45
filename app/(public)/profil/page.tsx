@@ -9,7 +9,7 @@ export default function ProfilPage() {
   // Data Legalitas
   const legalDocs = [
     { label: "NPWP Yayasan", value: "92.135.725.7-421.000" },
-    { label: "SK Kemenkumham RI", value: "AHU-0017530.AH.01.06. Tahun 2024" },
+    { label: "SK Kemenkumham RI", value: "AHU-0008346.AH.01.04.Tahun 2019" },
     { label: "Akta Pendirian", value: "No. 1 Tanggal 10 Juni 2019" },
     { label: "SKT Dinsos Provinsi", value: "062/194/PPSKS/2022" },
     { label: "Izin Operasional DPMPTSP", value: "062/3/TDLKS/DPMPTSP/IV/2022" },
