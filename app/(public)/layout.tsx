@@ -5,10 +5,10 @@ import JsonLd from "@/components/JsonLd";
 
 // --- KONFIGURASI SEO UNTUK HALAMAN PUBLIK ---
 export const metadata: Metadata = {
-  // vvvvv TAMBAHKAN BARIS INI vvvvv
-  metadataBase: new URL('https://bakti45.or.id'), 
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  
+  // vvvvvv UPDATE DOMAIN DI SINI vvvvvv
+  metadataBase: new URL('https://www.bakti45sejahtera.my.id'), 
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
   title: {
     default: "Yayasan Bakti 45 Sejahtera | Rumah Cinta Yatim Piatu & Duafa",
     template: "%s | Yayasan Bakti 45 Sejahtera",
@@ -18,11 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://bakti45.or.id",
+    // vvvvvv UPDATE JUGA DI SINI vvvvvv
+    url: "https://www.bakti45sejahtera.my.id",
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     siteName: "Yayasan Bakti 45 Sejahtera",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Kegiatan Yayasan Bakti 45 Sejahtera",
