@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Yayasan Bakti 45 Sejahtera",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Kegiatan Yayasan Bakti 45 Sejahtera",
