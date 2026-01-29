@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/studio/', 
+      disallow: '/studio/',
     },
-    sitemap: 'https://bakti45.or.id/sitemap.xml',
+    sitemap: 'https://www.bakti45sejahtera.my.id/sitemap.xml',
   };
 }
